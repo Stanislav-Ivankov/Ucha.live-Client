@@ -1,0 +1,25 @@
+<mat-sidenav-container class="example-container">
+
+	<mat-sidenav #sidenav mode="push" position="end">
+		<app-calendar [schedule]="getTodaySchedule()"></app-calendar>
+	</mat-sidenav>
+
+	<mat-sidenav-content>
+		<button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="sidenav.toggle()">
+			<mat-icon class="blue-icon">reorder</mat-icon>
+		</button>
+
+		<ng-container>
+			<button type="button" aria-label="Logout" mat-icon-button class="left" (click)="logout()">
+				<mat-icon class="blue-icon">settings_power</mat-icon>
+			</button>
+
+			<video-js id="my_video_1" class="vjs-default-skin" controls preload="auto" width="640" height="268"></video-js>
+		</ng-container>
+
+		<ng-container *ngIf="!visibleVideo">
+			<app-counter [setTime]="counterTime" [noMoreToday]="noMoreToday" [waitingForFirst]="waitingForFirst"></app-counter>
+		</ng-container>
+	</mat-sidenav-content>
+
+</mat-sidenav-container>

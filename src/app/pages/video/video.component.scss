@@ -1,0 +1,17 @@
+button {
+    position: absolute;
+    z-index: 12;
+    background: white;
+    right: 0;
+    border-radius: 0;
+
+    &.black {
+        background: black;
+        color: white;
+    }
+
+    &.left {
+        left: 0;
+        right: auto;
+    }
+}

@@ -1,0 +1,14 @@
+<div class="center">
+    <mat-form-field>
+        <mat-label>Акаунт</mat-label>
+        <input matInput [(ngModel)]="username">
+    </mat-form-field>
+    <br/>
+    <mat-form-field>
+        <mat-label>Парола</mat-label>
+        <input matInput [(ngModel)]="password" type="password">
+    </mat-form-field>
+    <div>
+        <button mat-button (click)="login()" mat-flat-button>Вход</button>
+    </div>
+</div>
